@@ -1,0 +1,15 @@
+{
+    "name": "wallisonferreira/autoloader-php",
+    "autoload": {
+        "psr-4": {
+            "Acme\\Log\\Writer\\": "acme-log-writer/lib/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Wallison Ferreira",
+            "email": "contato.sanfer@gmail.com"
+        }
+    ],
+    "require": {}
+}

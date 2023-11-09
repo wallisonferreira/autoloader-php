@@ -7,21 +7,20 @@ namespace Composer\Autoload;
 class ComposerStaticInit659adb7510cfbae1b6a61918d23e2680
 {
     public static $prefixLengthsPsr4 = array (
-        'A' => 
+        'a' => 
         array (
-            'Acme\\Log\\Writer\\' => 16,
+            'app\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Acme\\Log\\Writer\\' => 
+        'app\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/acme-log-writer/lib',
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
     public static $classMap = array (
-        'Acme\\Log\\Writer\\File_Writer' => __DIR__ . '/../..' . '/acme-log-writer/lib/File_Writer.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 

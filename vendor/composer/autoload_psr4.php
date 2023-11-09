@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Acme\\Log\\Writer\\' => array($baseDir . '/acme-log-writer/lib'),
+    'app\\' => array($baseDir . '/app'),
 );

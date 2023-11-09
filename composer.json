@@ -2,7 +2,7 @@
     "name": "wallisonferreira/autoloader-php",
     "autoload": {
         "psr-4": {
-            "Acme\\Log\\Writer\\": "acme-log-writer/lib/"
+            "app\\": "app/"
         }
     },
     "authors": [

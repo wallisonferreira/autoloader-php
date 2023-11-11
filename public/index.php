@@ -1,6 +1,7 @@
 <?php
 
 use app\library\Client;
+use app\library\database\Connection;
 use app\library\File_Writer;
 use app\library\Logger;
 use app\library\LoggerDatabase;
@@ -36,11 +37,7 @@ echo "<br/><br/>";
  * 
  * LoggerFile é uma classe concreta que implementa o
  * LoggerInterface.
- */
-$logger = new Logger();
-$logger->create(new LoggerFile());
-
-/**
+ *
  * Todo método público de uma classe funciona como uma
  * interface. Mas todos os detalhes de implementação
  * da classe estarão expostos. A interface visa esconder
@@ -49,3 +46,17 @@ $logger->create(new LoggerFile());
  * E para este caso implementamos estruturas de interfaces 
  * separadas.
  */
+$logger = new Logger();
+$logger->create(new LoggerFile());
+
+/**
+ * Transactions
+ */
+
+use app\library\database\Transaction;
+
+try {
+    
+} catch (\Throwable $e) {
+    echo $e->getMessage();
+}

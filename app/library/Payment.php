@@ -41,6 +41,8 @@ class Client
 
 $client = new Client();
 $client->pay(new PaypalPayment());
+// OR $client->pay(new PagSeguroPayment());
+// OR $client->pay(new GerenciaNetPayment());
 
 /**
  * Quando se tem uma família de classes que não se sabe qual irá se

@@ -5,7 +5,7 @@ use PDO;
 
 class Transaction
 {
-    private ?PDO $conn = null;
+    private static ?PDO $conn = null;
 
     public static function open()
     {
@@ -17,11 +17,20 @@ class Transaction
     {
         if (self::$conn) {
             self::$conn->rollBack();
+            self::$conn = null;
+        }
+    }
+
+    public static function get()
+    {
+        if (self::$conn) {
+            return self::$conn;
         }
     }
     public static function close()
     {
         if (self::$conn) {
+            self::$conn->commit();
             self::$conn = null;
         }
     }

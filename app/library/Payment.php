@@ -13,6 +13,11 @@ class PagSeguroPayment implements PaymentInterface
     {
         var_dump('pay with pagseguro');
     }
+
+    public function verifica()
+    {
+        var_dump('pay with pagseguro');
+    }
 }
 
 class PaypalPayment implements PaymentInterface
@@ -35,7 +40,7 @@ class Client
 {
     public function pay(PaymentInterface $payment) // strategy
     {
-        $payment->pay();        
+        $payment->pay();
     }
 }
 

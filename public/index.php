@@ -94,3 +94,10 @@ try {
     var_dump($th->getMessage());
     Transaction::rollback();
 }
+
+use app\library\abstracts\ClientePremium;
+/**
+ * Testa Polimorfismo
+ */
+$client = new ClientePremium;
+echo $client->verConta();
